@@ -13,7 +13,7 @@ The website was built using **HTML, CSS, and JavaScript**, with multiple section
 - Organized structure with HTML, CSS, and JavaScript separation  
 
 ### 🔗 Live Demo
-[Acesse o site aqui]([https://SEU-USUARIO.github.io/law-firm-website/](https://papayawhip-dotterel-222251.hostingersite.com/))  
+[View Website Here](https://papayawhip-dotterel-222251.hostingersite.com/)
 
 ---
 
@@ -30,7 +30,7 @@ O site foi construído com **HTML, CSS e JavaScript**, incluindo diferentes pág
 - Estrutura organizada com separação de HTML, CSS e JavaScript  
 
 ### 🔗 Demo Online
-[Acesse o site aqui]((https://papayawhip-dotterel-222251.hostingersite.com/))  
+[Acesse o site aqui](https://papayawhip-dotterel-222251.hostingersite.com/)
 
 ---
 
