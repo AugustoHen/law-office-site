@@ -44,4 +44,4 @@ O site foi construído com **HTML, CSS e JavaScript**, incluindo diferentes pág
 
 ## 👤 Author / Autor
 **Augusto**  
-[LinkedIn]((https://www.linkedin.com/in/augusto-henriques-793375206/)) | [GitHub](https://github.com/AugustoHen)
+[LinkedIn](https://www.linkedin.com/in/augusto-henriques-793375206/) | [GitHub](https://github.com/AugustoHen)
