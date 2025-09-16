@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Advogados — Lima & Alencar Advogados</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="css/advogados.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html" aria-label="Página inicial">
+        <img src="images/logo.png" alt="Lima & Alencar Advogados" class="logo">
+      </a>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Abrir menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="escritorio.html">Escritório</a></li>
+          <li><a href="areas.html">Áreas de Atuação</a></li>
+          <li><a href="advogados.html" class="active">Advogados</a></li>
+          <li><a href="contatos.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="section-head full-bleed">
+    <h1 class="section-title"><i class="fas fa-user-tie"></i> Nossos Advogados</h1>
+    <p class="section-sub">Profissionais experientes e dedicados à defesa dos seus direitos</p>
+  </div>
+
+  <section class="advogados fade-in">
+    <div class="container advogados-grid">
+      <div class="adv-card">
+        <img src="images/foto1.jpg" alt="Dr. João Lima">
+        <div class="adv-info">
+          <h2>Advogado 1</h2>
+          <p><strong>OAB:</strong> 123456</p>
+          <p>Áreas que atuam</p>
+          <a href="https://wa.me/5511999999999" target="_blank" class="btn-whats">
+            <i class="fab fa-whatsapp"></i> Agende pelo WhatsApp
+          </a>
+          <a href="https://www.instagram.com/lima.alencar.advs/" target="_blank" class="btn-insta">
+            <i class="fab fa-instagram"></i> Perfil no Instagram
+          </a>
+        </div>
+      </div>
+
+      <div class="adv-card">
+        <img src="images/foto2.jpg" alt="Dra. Maria Alencar">
+        <div class="adv-info">
+          <h2>Advogado 2</h2>
+          <p><strong>OAB:</strong> 123456</p>
+          <p>Áreas que atuam</p>
+          <a href="https://wa.me/5511988888888" target="_blank" class="btn-whats">
+            <i class="fab fa-whatsapp"></i> Agende pelo WhatsApp
+          </a>
+          <a href="https://www.instagram.com/lima.alencar.advs/" target="_blank" class="btn-insta">
+            <i class="fab fa-instagram"></i> Perfil no Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="escritorio.html">Escritório: Rua ABC, nº 127 - São Paulo - SP</a>
+        <a href="contatos.html">Contato: +55 (11) 95069-2333</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://wa.me/5511950692333" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/lima.alencar.advs/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p>&copy; 2025 Lima & Alencar Advogados. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/351964455247" class="whatsapp-button" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script/main.js"></script>
+</body>
+</html>

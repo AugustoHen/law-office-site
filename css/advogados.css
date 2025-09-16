@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  background:#000;
+  color:#2E3133;
+  font-family:"Merriweather",serif;
+  background-image:url('../images/background.png');
+  background-size:contain;
+  background-repeat:repeat;
+  line-height:1.6;
+  overflow-x:hidden
+}
+
+.container{width:min(1200px,92%);margin:0 auto}
+section{padding:40px 20px}
+
+header{
+  background:rgba(17,17,17,.9);
+  color:#fff;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(6px)
+}
+header .container{display:flex;align-items:center;justify-content:space-between;padding:0 20px}
+.logo{height:50px}
+.hamburger{display:none;background:#111;border:1px solid #222;color:#fff;border-radius:12px;padding:8px 12px;font-size:30px;cursor:pointer}
+
+#primary-nav ul{list-style:none;display:flex;gap:50px}
+#primary-nav a{color:rgba(186,80,40,1);font-weight:bold;text-decoration:none;position:relative;display:inline-block}
+#primary-nav a.active,#primary-nav a:hover{color:#fff}
+#primary-nav a.active::after{content:"";position:absolute;left:0;bottom:-6px;width:100%;height:2px;background:rgba(186,80,40,1);border-radius:2px}
+
+.section-head{
+  text-align:center;
+  padding:24px 20px;
+  background:linear-gradient(to bottom,rgba(17,17,17,.9),rgba(17,17,17,1));
+  color:#fff
+}
+.section-head.full-bleed{inline-size:100vw;margin-inline:calc(50% - 50vw)}
+.section-title{font-size:clamp(22px,2.4vw,32px);font-weight:700;display:flex;align-items:center;gap:10px;justify-content:center}
+.section-title i{color:rgba(186,80,40,1)}
+.section-sub{color:#ccc;margin-top:6px}
+
+.advogados-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.adv-card{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  gap:20px;
+  background:#111;
+  border:1px solid #222;
+  border-left:6px solid rgba(186,80,40,1);
+  border-radius:12px;
+  padding:20px;
+  color:#dedede
+}
+.adv-card img{width:200px;height:220px;object-fit:cover;border-radius:10px;border:2px solid rgba(186,80,40,1)}
+.adv-info h2{color:#fff;margin-bottom:6px}
+.adv-info p{margin:4px 0;color:#d5d8de}
+
+.btn-whats,.btn-insta{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:10px;
+  padding:10px 14px;
+  border-radius:10px;
+  font-weight:bold;
+  text-decoration:none;
+  transition:transform .2s;
+  width:fit-content
+}
+.btn-whats{background:#25D366;color:#fff}
+.btn-whats:hover{transform:scale(1.05);background:#20b955}
+.btn-insta{background:linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5);color:#fff}
+.btn-insta:hover{transform:scale(1.05);opacity:.9}
+
+footer{
+  background:#000;
+  color:rgba(186,80,40,1);
+  text-align:center;
+  padding:20px;
+  margin-top:40px
+}
+footer .footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:50px;margin-bottom:10px;margin-left: -50px;}
+footer .footer-links a{color:rgba(186,80,40,1);text-decoration:none;font-weight:600}
+footer .footer-links a:hover{color:#fff}
+footer .footer-social{display:flex;justify-content:center;gap:250px;margin-bottom:10px}
+footer .footer-social a{font-size:28px;color:rgba(186,80,40,1);font-size: 30px}
+footer .footer-social a:hover{color:#fff}
+
+.whatsapp-button{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  border-radius:50%;
+  width:60px;
+  height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  z-index:1000
+}
+
+@media (max-width: 900px){
+  .advogados-grid{grid-template-columns:1fr}
+  .adv-card{flex-direction:column;text-align:center}
+  .adv-card img{width:100%;max-width:300px;height:auto}
+}
+@media (max-width: 840px){
+  header .container{flex-direction:column;align-items:center;gap:8px}
+  .logo{margin:0 auto}
+  .hamburger{display:block;margin:6px auto 0}
+  #primary-nav ul{display:none;flex-direction:column;width:100%;padding:10px 0;gap:24px}
+  #primary-nav ul.active{display:flex;background:rgba(11,11,11,.95);padding:12px;border-radius:12px;text-align:center}
+}
+@media (max-width: 520px){
+  footer .footer-social{gap:14px}
+  footer .footer-links{gap:8px}
+}

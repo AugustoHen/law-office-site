@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  background:#000;
+  color:#2E3133;
+  font-family:"Merriweather",serif;
+  background-image:url('../images/background.png');
+  background-size:contain;
+  background-position:center;
+  background-repeat:repeat;
+  line-height:1.6;
+  overflow-x:hidden
+}
+
+.container{width:min(1200px,92%);margin:0 auto}
+section{padding:40px 20px;background:transparent}
+
+/* Header padronizado */
+header{
+  background-color:rgba(17,17,17,.9);
+  color:#fff;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  -webkit-backdrop-filter:blur(6px);
+  backdrop-filter:blur(6px);
+  box-shadow:0 2px 12px rgba(0,0,0,.35)
+}
+header .container{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 20px;position:relative}
+.logo{height:50px;width:auto;display:block;margin-left:-50px}
+.hamburger{display:none;background:#111;border:1px solid #222;color:#fff;border-radius:12px;padding:8px 12px;font-size:30px;cursor:pointer}
+#primary-nav ul{list-style:none;display:flex;gap:50px;margin:0;padding:0}
+#primary-nav a{color:rgba(186,80,40,1);font-weight:bold;text-decoration:none;position:relative;display:inline-block}
+#primary-nav a:hover,#primary-nav a.active{color:#fff}
+#primary-nav a.active::after{content:"";position:absolute;left:0;bottom:-6px;width:100%;height:2px;background:rgba(186,80,40,1);border-radius:2px}
+
+/* Faixa de título */
+.section-head{
+  text-align:center;
+  padding:24px 20px;
+  background:linear-gradient(to bottom,rgba(17,17,17,.9),rgba(17,17,17,1));
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center
+}
+.section-head.full-bleed{inline-size:100vw;margin-inline:calc(50% - 50vw);max-width:none}
+.section-title{font-size:clamp(22px,2.4vw,32px);font-weight:700;line-height:1.2;display:inline-flex;align-items:center;gap:10px}
+.section-title i{color:rgba(186,80,40,1)}
+.section-sub{color:#ccc;font-size:1.05rem;margin-top:6px}
+
+/* Cards de contato (sem formulário) */
+.contact-cards{display:grid;gap:18px;grid-template-columns:repeat(2,1fr)}
+.contact-cards .card{
+  background:#0f0f10;
+  border:1px solid #1c1c1c;
+  border-left:6px solid rgba(186,80,40,1);
+  border-radius:12px;
+  padding:18px;
+  color:#d5d8de
+}
+.contact-cards .card h2{
+  display:flex;align-items:center;gap:8px;
+  color:#fff;margin:0 0 8px;font-size:1.15rem
+}
+.contact-cards .card p{margin:0 0 12px;color:#cfd3da}
+
+/* Botões */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:10px;
+  font-weight:700;
+  text-decoration:none;
+  color:#fff;
+  width:fit-content
+}
+.btn.whats{background:linear-gradient(45deg,#25D366,#128C7E)}
+.btn.mail{border:2px solid rgba(186,80,40,1);background:transparent}
+.btn.mail:hover{background:rgba(186,80,40,1)}
+.btn.insta{background:linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5)}
+
+/* Footer + social */
+footer{
+  background:#000;
+  color:rgba(186,80,40,1);
+  text-align:center;
+  padding:20px;
+  margin-top:40px
+}
+footer .footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:100px;margin-bottom:12px;margin-left: -50px;}
+footer .footer-links a{color:rgba(186,80,40,1);text-decoration:none;font-weight:600}
+footer .footer-links a:hover{color:#fff}
+
+
+footer .footer-social {display: flex;justify-content: center; gap: 300px; margin-bottom: 10px;}
+footer .footer-social a {
+  font-size: 28px;
+  color: rgba(186,80,40,1); 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 40px;
+  gap: 100px;
+}
+
+footer .footer-social a:hover {
+  color: rgb(255, 255, 255); 
+}
+
+
+/* Botão flutuante WhatsApp */
+.whatsapp-button{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  border-radius:50%;
+  width:60px;
+  height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+  text-decoration:none;
+  z-index:1000;
+  box-shadow:0 4px 8px rgba(0,0,0,.1);
+  transition:transform .3s ease
+}
+.whatsapp-button:hover{transform:scale(1.1)}
+
+/* FAQ */
+.faq .faq-list{max-width:900px;margin:0 auto}
+.faq-item{
+  background:#0f0f10;
+  border:1px solid #1c1c1c;
+  border-left:6px solid rgba(186,80,40,1);
+  border-radius:12px;
+  padding:0 14px;
+  margin:12px 0;
+  color:#d5d8de;
+  transition:box-shadow .2s ease
+}
+.faq-item:hover{box-shadow:0 8px 22px rgba(0,0,0,.25)}
+.faq-item summary{
+  list-style:none;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  cursor:pointer;
+  padding:16px 6px;
+  font-weight:700;
+  color:#fff
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary i{transition:transform .2s ease;opacity:.9;color:#fff}
+.faq-item[open] summary i{transform:rotate(180deg)}
+.faq-item .answer{padding:0 6px 16px 6px;line-height:1.7}
+.faq-item .answer p{margin:0;color:#dfe3ea}
+.faq{padding-top:32px;padding-bottom:8px}
+
+/* ==================== MEDIA QUERIES (final) ==================== */
+@media (max-width: 1024px){
+  .contact-cards{grid-template-columns:1fr 1fr}
+}
+@media (max-width: 840px){
+  header .container{flex-direction:column;align-items:center;gap:8px}
+  .logo{margin:0 auto !important}
+  .hamburger{display:block;margin:6px auto 0}
+  #primary-nav ul{display:none;flex-direction:column;width:100%;padding:10px 0;gap:30px}
+  #primary-nav ul.active{
+    display:flex;
+    padding:12px;
+    margin:10px 0 0;
+    background:rgba(11,11,11,.92);
+    border:1px solid #1d1d1d;
+    border-radius:12px;
+    box-shadow:0 16px 40px rgba(0,0,0,.35);
+    backdrop-filter:blur(8px);
+    text-align:center
+  }
+  footer .footer-links{ margin: 0 50px;}
+}
+@media (max-width: 640px){
+  .contact-cards{grid-template-columns:1fr}
+}
+@media (max-width: 520px){
+  .faq-item summary{padding:14px 4px}
+  .faq .faq-list{padding:0 2px}
+  footer .footer-links{gap:14px}
+  footer .footer-social{gap:14px}
+}
